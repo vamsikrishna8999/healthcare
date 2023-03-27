@@ -24,7 +24,7 @@ function Navigationbar() {
         style={({isActive})=>{
           return isActive?activeLink:inactiveLink;
         }} >
-          Today
+          Records
         </NavLink>
       </li>
 
@@ -33,7 +33,7 @@ function Navigationbar() {
         style={({isActive})=>{
           return isActive?activeLink:inactiveLink;
         }} >
-          Tasks
+          Details
         </NavLink>
       </li>
 

@@ -23,7 +23,7 @@ function Today() {
 
 let submitForm=(data)=>{
     //post request to Tasks
-    axios.post("http://localhost:5000/Tasks",data)
+    axios.post("http://localhost:5000/Records",data)
     .then(response=>{
       if(response.status===201){
         setErr("")
@@ -52,69 +52,69 @@ let submitForm=(data)=>{
         <div className=" mx-auto">
           <div className="pt-5">
             {err.length!==0 && <h2 className="display-2 text-danger text-center">{err}</h2>}
-            <p className="display-3 text-white text-center fw-bold header">Tasklist</p>
+            <p className="display-3 text-white text-center fw-bold header">Enter Details</p>
           </div>
           <form onSubmit={handleSubmit(submitForm)} className="bg-black text-white p-5 mb-5 bg-opacity-25 rounded-circle " >
         
             <div className="row">
               <div className="col-12 col-sm-6 col-md-3 mb-3">
 
-                            <label htmlFor="Task" className='mb-2 fw-bold labels'>Task</label>
-                            <input type="text" id="Task" className="form-control" 
-                            {...register("Task",{required:"*Please provide Task"})} />
+                            <label htmlFor="disease" className='mb-2 fw-bold labels'>Disease</label>
+                            <input type="text" id="disease" className="form-control" 
+                            {...register("Disease",{required:"*Please provide disease"})} />
                             {errors && 
-                            <p className="text-warning fw-bold">{errors.Task?.message}</p> }
+                            <p className="text-warning fw-bold">{errors.Disease?.message}</p> }
               </div>
 
-              <div className="col-sm-6 col-md-2  mb-3">
-                            <label htmlFor="StartTime" className='mb-2 fw-bold labels'>StartTime</label>
-                            <input type="time" className='form-control' required 
-                            {...register("StartTime",{required:true})} />
+              <div className="col-12 col-sm-6 col-md-3 mb-3">
+
+                            <label htmlFor="hospital" className='mb-2 fw-bold labels'>Hospital</label>
+                            <input type="text" id="doc" className="form-control" 
+                            {...register("Hospital",{required:"*Please provide Hospital"})} />
+                            {errors && 
+                            <p className="text-warning fw-bold">{errors.Hospital?.message}</p> }
+              </div>
+
+              <div className="col-12 col-sm-6 col-md-3 mb-3">
+
+                            <label htmlFor="doc" className='mb-2 fw-bold labels'>Doctor</label>
+                            <input type="text" id="doc" className="form-control" 
+                            {...register("Doctor",{required:"*Please provide Doctor"})} />
+                            {errors && 
+                            <p className="text-warning fw-bold">{errors.Doctor?.message}</p> }
+              </div>
+
+              <div className="col-12 col-sm-6 col-md-3 mb-3">
+                            <label htmlFor="visit" className='mb-2 fw-bold labels'>Visited on</label>
+                            <input type="date" id="visit" className="form-control" 
+                            {...register("Visit",{required:true})} />
                             
               </div>
 
-              <div className="col-sm-6 col-md-2 mb-3">
-                            <label htmlFor="EndTime" className='mb-2 fw-bold labels'>EndTime</label>
-                            <input type="time" className='form-control' required 
-                            {...register("EndTime",{required:true})} />              
+              <div className="col-12 mb-3">
+
+                            <label htmlFor="prescription" className='mb-2 fw-bold labels'>Prescription</label>
+                            <input type="text" id="prescription" className="form-control" 
+                            {...register("Prescription",{required:"*Please provide prescription"})} />
+                            {errors && 
+                            <p className="text-warning fw-bold">{errors.Prescription?.message}</p> }
               </div>
 
-              <div className="col-sm-6 col-md-2 mb-3">
-                            <label htmlFor="Category" className='fw-bold mb-2 labels'>Category</label>
-                            <select {...register("Category",{required:"Category required"})} name="Category" id="Category" className="form-select mb-3">
 
-                            
-                            <option value="Personal">Personal</option>
-                            <option value="Work">Work</option>
-                            <option value="College">College</option>
-                            <option value="Entertainment">Entertainment</option>
+              
 
-
-                            </select>
-                            <p className="text-danger">{errors.Category?.message}</p> 
-              </div>
-
-              <div className="col-sm-6 col-md-2  mb-3">
-                            <label htmlFor="Status" className='fw-bold mb-2 labels'>Status</label>
-                            <select {...register("Status",{required:"*Please provide Status"})} name="Status" id="Status" className="form-select mb-3" defaultValue={""}>
-
-                            <option value="" disabled>Choose</option>
-                            <option value="Active">Active</option>
-                            <option value="Completed">Completed</option>
-                            <option value="Cancelled">Cancelled</option>
-                            </select>
-                            <p className="text-warning fw-bold">{errors.Status?.message}</p> 
-              </div>
-
-              <div className="col-sm-6 col-md-1 pt-1">
-                
-                <button className="btn mt-4 float-end"type='submit'>
-                  <span className='fs-2 text-light '><CgAdd /></span>
+            </div> 
+            
+            <div className="text-center">
+            <button className="btn mt-4 btn-success"type='submit'>
+                  <span className='fs-2 text-light'>Add<CgAdd /></span>
 
                 </button>
-              </div>
 
-            </div>   
+            </div>
+                
+                
+             
           </form>
         </div>
       </div> 

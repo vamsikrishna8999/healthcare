@@ -52,9 +52,5 @@ We can perform the following operations.\
 - Delete a particular Task
 - Clear all Tasks
 
-## Screenshots
-
-![App Screenshot](./src/components/images/Screenshot%20(64).png)
-![App Screenshot](./src/components/images/Screenshot%20(65).png)
 
 

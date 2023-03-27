@@ -1,5 +1,28 @@
 {
-  "Tasks": [
-    
+  "Records": [
+    {
+      "Disease": "sugar",
+      "Hospital": "omni",
+      "Doctor": "vamsi",
+      "Visit": "2023-03-31",
+      "Prescription": "nnnnnnnnnnnnnnn",
+      "id": 2
+    },
+    {
+      "Disease": "cancer",
+      "Hospital": "ilaka",
+      "Doctor": "varun",
+      "Visit": "2023-03-08",
+      "Prescription": "dolo",
+      "id": 3
+    },
+    {
+      "Disease": "corona",
+      "Hospital": "ramesh",
+      "Doctor": "koushik",
+      "Visit": "2023-03-24",
+      "Prescription": "vacc-01,02",
+      "id": 4
+    }
   ]
 }
