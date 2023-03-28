@@ -21,7 +21,7 @@ function App() {
       element:<RootLayot />,
       children:[
         {
-          path:"/Login",
+          path:"/",
           element:<Login />
         },
         {
@@ -29,7 +29,7 @@ function App() {
           element:<Register />
         },
         {
-          path:"/",
+          path:"/Dashboard",
           element:<Dashboard />
         },
         {

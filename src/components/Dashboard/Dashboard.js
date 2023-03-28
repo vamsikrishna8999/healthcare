@@ -1,8 +1,9 @@
 import React from 'react'
 
 function Dashboard() {
+  let name = localStorage.getItem('id')
   return (
-    <div>Dashboard</div>
+    <div>{name}</div>
   )
 }
 
