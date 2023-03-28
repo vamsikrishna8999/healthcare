@@ -45,6 +45,28 @@ let submitForm=(data)=>{
         setErr(err.message)
       }
     })
+  data = { email: localStorage.getItem('id'), data }
+
+  axios.post("http://localhost:9200/Today", data)
+    .then(response => {
+      if (response.status === 201) {
+        setErr("")
+        navigate("/Tasks")
+      }
+    }).catch(err => {
+      // response error 
+      if (err.response) {
+        setErr(err.message)
+      }
+      //network request error
+      else if (err.request) {
+        setErr(err.message)
+      }
+      //other errors
+      else {
+        setErr(err.message)
+      }
+    })
 }
   return (
     <div className="today">

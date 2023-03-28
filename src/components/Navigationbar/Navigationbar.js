@@ -19,9 +19,17 @@ function Navigationbar() {
     
     <div className=" bg-black box-shadow">
       <ul className="nav justify-content-center nav-pills p-1">
+        <li className="nav-item">
+          <NavLink className="nav-link " to="/"
+            style={({ isActive }) => {
+              return isActive ? activeLink : inactiveLink;
+            }} >
+            Login
+          </NavLink>
+        </li>
 
       <li className="nav-item">
-        <NavLink className="nav-link " to="/" 
+        <NavLink className="nav-link " to="/Dashboard" 
         style={({isActive})=>{
           return isActive?activeLink:inactiveLink;
         }} >
