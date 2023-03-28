@@ -37,6 +37,42 @@ function Navigationbar() {
         </NavLink>
       </li>
 
+      <li className="nav-item">
+        <NavLink className="nav-link " to="/ReportForm" 
+        style={({isActive})=>{
+          return isActive?activeLink:inactiveLink;
+        }} >
+          ReportForm
+        </NavLink>
+      </li>
+
+      <li className="nav-item">
+        <NavLink className="nav-link " to="/Report" 
+        style={({isActive})=>{
+          return isActive?activeLink:inactiveLink;
+        }} >
+          Reports
+        </NavLink>
+      </li>
+
+      <li className="nav-item">
+        <NavLink className="nav-link " to="/Zen" 
+        style={({isActive})=>{
+          return isActive?activeLink:inactiveLink;
+        }} >
+          Zen
+        </NavLink>
+      </li>
+
+      <li className="nav-item">
+        <NavLink className="nav-link " to="/Dashboard" 
+        style={({isActive})=>{
+          return isActive?activeLink:inactiveLink;
+        }} >
+          Dashboard
+        </NavLink>
+      </li>
+
     </ul>
 
     </div>
