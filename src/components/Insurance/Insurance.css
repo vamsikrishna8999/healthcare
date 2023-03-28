@@ -1,0 +1,7 @@
+.insu{
+    background-image: url("../images/todo2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+    font-family: 'Montserrat', sans-serif;
+}

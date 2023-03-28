@@ -19,8 +19,18 @@ function Navigationbar() {
     
     <div className=" bg-black box-shadow">
       <ul className="nav justify-content-center nav-pills p-1">
+
       <li className="nav-item">
         <NavLink className="nav-link " to="/" 
+        style={({isActive})=>{
+          return isActive?activeLink:inactiveLink;
+        }} >
+          Dashboard
+        </NavLink>
+      </li>
+
+      <li className="nav-item">
+        <NavLink className="nav-link " to="/Today" 
         style={({isActive})=>{
           return isActive?activeLink:inactiveLink;
         }} >
@@ -65,13 +75,24 @@ function Navigationbar() {
       </li>
 
       <li className="nav-item">
-        <NavLink className="nav-link " to="/Dashboard" 
+        <NavLink className="nav-link " to="/Ayurveda" 
         style={({isActive})=>{
           return isActive?activeLink:inactiveLink;
         }} >
-          Dashboard
+          Ayurveda
         </NavLink>
       </li>
+
+      <li className="nav-item">
+        <NavLink className="nav-link " to="/Insurance" 
+        style={({isActive})=>{
+          return isActive?activeLink:inactiveLink;
+        }} >
+          Insurance
+        </NavLink>
+      </li>
+
+      
 
     </ul>
 
